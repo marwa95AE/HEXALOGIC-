@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analog Sites - Mars Analog Sites - HexaLogic</title>
+<link rel="stylesheet" href="style.css">
+<script src="background.js" defer></script>
+<script src="app.js" defer></script>
+<script src="localization.js" defer></script>
+</head>
+<body>
+
+<header id="top">
+<h1>Mars Analog Sites Interface - Full New Data</h1>
+<p><strong>Team:</strong> HexaLogic </p>
+<nav id="main-nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><strong>Analog Sites</strong></li>
+<li><a href="test-sites.html">Site Analogy Test</a></li>
+<li><a href="weather.html">Weather & Comparison</a></li>
+<li><a href="team.html">Team</a></li>
+</ul>
+</nav>
+</header>
+
+<hr>
+
+<section id="analogs">
+<h2>Terrestrial Mars Analog Sites - 6 Sites Full New Data From JSON Files</h2>
+
+<nav id="sites-index">
+<h3>Sites Index</h3>
+<ol>
+<li><a href="#mcmurdo">1. McMurdo Dry Valleys</a></li>
+<li><a href="#atacama">2. Atacama Desert</a></li>
+<li><a href="#haughton">3. Haughton Crater</a></li>
+<li><a href="#riotinto">4. Rio Tinto</a></li>
+<li><a href="#danakil">5. Danakil Depression</a></li>
+<li><a href="#iceland">6. Askja & Vatnajokull</a></li>
+
+</ol>
+<p><a href="#sites-compare">Quick comparison table</a></p>
+</nav>
+
+<p id="sites-status" class="api-status error" role="status" hidden></p>
+<h3 id="sites-compare">Quick Comparison Table - 6 Sites - New Data</h3>
+<table id="sites-compare-table" border="1" cellpadding="8" cellspacing="0">
+<thead><tr><th>Site</th><th>Region</th><th>Mars Counterpart</th><th>Coordinates</th><th>Key Number From New Data</th></tr></thead>
+<tbody>
+<tr><td><a href="#mcmurdo">McMurdo</a></td><td>Antarctica</td><td>Mars South Pole</td><td>77.5S, 162E</td><td>Mean -20C, extremes -65.7 to 12C, perchlorate 49 ug/L, 58 sols Mars-sim</td></tr>
+<tr><td><a href="#atacama">Atacama</a></td><td>Chile Yungay</td><td>Valles Marineris</td><td>24.0578S, 69.8258W elev 948m</td><td>Precip less than 2 mm/year, soil perchlorate 290-2565 ug/kg, UV Index 20</td></tr>
+<tr><td><a href="#haughton">Haughton</a></td><td>Devon Island Canada</td><td>Gale Crater</td><td>75.3667N, -89.6833W</td><td>Apparent 23 km, original 16 km, age 31.04 ±0.37 Ma, thickness 125m volume 7 km3</td></tr>
+<tr><td><a href="#riotinto">Rio Tinto</a></td><td>Huelva Spain</td><td>Meridiani Planum</td><td>37.7N, -6.6W</td><td>Dissolved Fe 20 g/L upper, Fe(III) 225.2 mmol/L, sulfate 24700 mg/L, pH 0.9-2.5, jarosite</td></tr>
+<tr><td><a href="#danakil">Danakil</a></td><td>Ethiopia Dallol</td><td>Columbia Hills Gusev Home Plate</td><td>14.24N, 40.30E -155m</td><td>Silica greater than 90% at Home Plate, Cl Br Zn Ge high, carbonate Comanche like ALH84001</td></tr>
+<tr><td><a href="#iceland">Askja</a></td><td>Iceland</td><td>Acidalia & Arcadia Planitia</td><td>65.03N, -16.75W</td><td>Tuya 7x5 km height 470m Viking 26A28, volcanic glass sand, jokulhlaup floods, Odyssey 2002 ice</td></tr>
+</tbody>
+</table>
+
+<article id="mcmurdo" class="site">
+<h3>1. McMurdo Dry Valleys - Full New Data From Your File</h3>
+<p><strong>Region:</strong> Antarctica - Taylor, Wright, Victoria Valleys - Region not single point</p>
+<p><strong>Mars Counterpart:</strong> Mars South Pole (Planum Australe), Utopia Planitia</p>
+<p><strong>Description:</strong> Cold hyper-arid Antarctic desert region used for extreme environments Mars-analogue conditions</p>
+<table border="1" cellpadding="8" cellspacing="0">
+<thead><tr><th>Property From Your File</th><th>Values From Your New File</th><th>Mars Analogy</th><th>Sources</th></tr></thead>
+<tbody>
+<tr><td>1. Extreme cold and thermal cycling</td><td>Annual mean air temp -20 degC approximate long-term 1986-2017 multiple stations not live reading, Reported extremes min approx -65.7C max approx 12C station-record dependent not region-wide simultaneous</td><td>Freeze-thaw active soil layer, water and salt movement, microbial cold tolerance - Antarctic not identical to Mars</td><td>mcm.lternet.edu, NSIDC, NASA POWER, data policy: not all values 2026 measurements historical approximate must not present as live</td></tr>
+<tr><td>2. Extreme aridity and sublimation</td><td>Annual precip upper reference less than 100 mm water equiv/year climatological varies, Lake-ice sublimation rate 0.1-0.2 mm/year minimum maximum</td><td>Low precip scarce liquid water sublimation important pathway for snow ice loss on Mars</td><td>Landsat MODIS Earthdata</td></tr>
+<tr><td>3. Solar and UV radiation</td><td>Mean solar radiation 102 W/m2, UV Index 0.35, Total ozone 216.37 Dobson units</td><td>Solar UV high exposure test for organics electronics</td><td>NOAA gmd-int.cmdl.noaa.gov/grad/antuv, NASA POWER</td></tr>
+<tr><td>4. Soil salts and perchlorates</td><td>Perchlorate Lake Vida sample 49 microgram/L, Chlorate 11 microgram/L, Surface-water chemistry Wright Taylor Valleys null means no verified numeric must never render as zero</td><td>Perchlorate found by Phoenix same chemistry salty soil</td><td>PDS Geosciences, usap-dc.org LTER</td></tr>
+<tr><td>5. Isolation and life-detection protocols</td><td>Cryptoendolithic microorganisms photosynthetic bacteria inside relatively moist interior rocks closest to Mars, Exposure to Mars-simulation conditions 58 sols, UVC-equivalent exposure biosignature detection test 278 martian years equivalent</td><td>Model for protected life in rocks, testing SOLID life detection, ISRU water extraction</td><td>astrobiology.nasa.gov, NASA Astrobiology Institute, Wright Valley across image lower left upper right Victoria Valley left partially fog-covered image acquired Dec 8 2002 58.5x64.9 km located 77.5S 162E NASA/METI/AIST ASTER</td></tr>
+</tbody>
+</table>
+<p><a href="#sites-index">&uarr; Back to Index</a></p>
+</article>
+
+<article id="atacama" class="site">
+<h3>2. Atacama Desert - Full New Data</h3>
+<p><strong>Region:</strong> Chile - Yungay, Antofagasta, San Pedro de Atacama, Chajnantor Plateau, Paranal - Large region coordinates belong to individual stations not entire desert</p>
+<p><strong>Description:</strong> Extremely arid desert in northern Chile field sites used as terrestrial analogues for Mars research and testing drilling and life-detection technologies</p>
+<p><strong>Coordinates Policy:</strong> Atacama is large region coordinates and elevations belong to individual stations - Yungay site used here 24.0578S 69.8258W elev 948m</p>
+<table border="1" cellpadding="8" cellspacing="0">
+<thead><tr><th>Property</th><th>New Values</th><th>Mars Analogy & Notes</th></tr></thead>
+<tbody>
+<tr><td>1. Hyper-Aridity</td><td>Yungay annual precip less than 2 mm/year site climatological description cited in 2023 research not entire desert, Mean annual air temp 14-16 degC reported range not live reading, Reported min max -5.7 to 37.9 degC site extremes not generalize to all stations Atacama, Relative humidity range 1-95% varies by fog time not daily average, Potential evapotranspiration 1-2 mm/day approximate literature estimate</td><td>Parts of hyperarid core exceptionally little precipitation long-term dryness promotes salt accumulation limits liquid water like Mars, Display measurement site and elevation beside each reading, Distinguish measured values published ranges averages estimates experimental results</td></tr>
+<tr><td>2. Soil Chemistry and Perchlorates</td><td>Perchlorate soil samples 290-2565 ug/kg min max, Surface water perchlorate 744-1480 ug/L, Mean perchlorate multi-site survey 206 mg/kg, Soil samples site-specific different sampling periods do not present regional estimates historic measurements lab results as current live observations null means no verified numeric never render as zero</td><td>Perchlorate levels from Atacama Desert pubmed 24165784 2014, Nitrate perchlorate iodate co-occur Purdue 2016, Atacama is Mars analog soil chemistry</td></tr>
+<tr><td>3. Extremely High UV Radiation</td><td>Measured peak UV Index Chajnantor Plateau 20, Paranal 16, Expected summer noon 11, UV station records catalogue Direccion Meteorologica de Chile climatologia.meteochile.gob.cl catalog 94 lists stations and date coverage query station-level observations for latest actual value, Worlds highest levels of surface UV 2014 pp c3pp50221j, UV radiation 2018 pubmed 29605897, Do not present historical UV peaks as current readings</td><td>Highest UV on Earth similar to Mars thin atmosphere high elevation</td></tr>
+<tr><td>4. Salt-Crust and Evaporite Terrain</td><td>Salt content polygonal soil surface 31 weight percent, Polygon subsurface 50 weight percent, Chloride deliquescent soil sites 50 g/kg, Habitability polygonal soils hyper-arid Atacama after simulated rain experiment 2023 agupubs 2022JG007328, Microbial response deliquescence nitrate-rich soils 2024 bg.copernicus 21 5305 2024, Mechanisms soil gypsum formation triple oxygen hydrogen isotopes 2024 sciencedirect 0341816224003680, Do not generalize individual soil samples to entire Atacama Desert</td><td>Salt crusts evaporites geomorphologically similar to Mars layered outcrops</td></tr>
+<tr><td>5. Rover Autonomy Testbed</td><td>ARADS field-test programme duration 4 years 2016-2019, K-REX2 rover drill design capability 2 m, Drilling depth discussed in ARADS lessons-learned abstract 1 m, Atacama Rover Astrobiology Drilling Studies ARADS nasa.gov/universe/atacama-rover-astrobiology-drilling-studies-arads, Field Analog Lessons-learned ARADS Deployments 2024 ntrs.nasa.gov/citations/20240000586, NASA Astrobiology Field Sites astrobiology.nasa.gov/research-locations/</td><td>Rover autonomy testbed for Perseverance Curiosity drilling analog portable lab examines Earth most barren soils instruments can detect very small amounts target molecules sun-baked soil</td></tr>
+</tbody>
+</table>
+<p><a href="#sites-index">&uarr; Back to Index</a></p>
+</article>
+
+<article id="haughton" class="site">
+<h3>3. Haughton Crater - Full New Data</h3>
+<p><strong>Location:</strong> Devon Island, Nunavut, Canada, North America, Coordinates 75.3667N -89.6833W approximate structure reference individual samples require own coordinates</p>
+<p><strong>Description:</strong> Well-preserved complex impact structure on Devon Island Canadian High Arctic used as terrestrial analogue for impact geology polar surface processes lunar and Mars exploration technologies</p>
+<p><strong>Age Note Important:</strong> Older publications report age near 23-24 Ma, 2021 coupled U-Pb and 40Ar/39Ar study reported 31.04 ±0.37 Ma use newer geochronology with method and uncertainty noting historical discrepancy</p>
+<img src="https://photojournal.jpl.nasa.gov/jpeg/PIA03714.jpg" width="400">
+<table border="1" cellpadding="8" cellspacing="0">
+<thead><tr><th>Property</th><th>New Values</th><th>Scientific Significance & Mars</th></tr></thead>
+<tbody>
+<tr><td>1. Impact Crater Morphology</td><td>Present apparent crater diameter 23 km approximate published value published geological mapping reviews many studies 20-24 km depending on crater rim definition, Estimated original final crater diameter 16 km published geological reconstruction 2024 research original final before subsequent modifications not equal present apparent 23 km, Impact age 31.04 ±0.37 Ma weighted mean 40Ar/39Ar age period 2021 publication peer-reviewed geochronology weighted mean from four reverse 40Ar/39Ar on shocked feldspar clasts supported by U-Pb dating, Impact structure location lat 75.3667 lon -89.6833 decimal degrees approximate structure reference not station</td><td>Understanding evolution complex craters after impact, comparison geological structure polar processes</td></tr>
+<tr><td>2. Impact Breccia and Impact-Melt Rocks</td><td>Maximum present thickness crater-fill impactites 125 m, Approximate present volume crater-fill impactites 7 km3, Approximate areal extent central crater-fill unit 60 km2</td><td>Breccia melt rocks like at Gale, ejecta impact-melt brecciated material</td></tr>
+<tr><td>3. Cold and Arid Polar Climate</td><td>Environmental classification polar_desert, Depth at which ground ice was encountered in project samples 60 cm, Samples recovered in field campaign 100 samples approx</td><td>Polar desert ice at shallow depth model for Mars ice, frost rubble zone</td></tr>
+<tr><td>4. Gullies, Meltwater Channels, and Ice Weathering</td><td>Meltwater channel networks, Glacial trough valleys, Small lakes and ponds, Astronaut Canyon ripple-like valleys similar to Ius Chasma Valles Marineris</td><td>Gullies meltwater channels on Mars, ice weathering</td></tr>
+<tr><td>5. Human Isolation and Communications Research</td><td>FMARS long-duration mission crew size 7 crew_members, Long-duration simulation mission length 4 months, Research projects conducted 20 projects minimum, Devon Island largest uninhabited island less than 1000 miles from North Pole, Haughton-Mars Project Base Camp frost rubble zone polar desert only crater known in such environment studied as promising Mars analog by NASA-led Haughton-Mars Project beginning 1997, K-10 Rover Red base camp photo Matt Deans NASA MCD_0838.JPG, False-color image water and sea-ice blue barren land greenish-yellow crater purplish-white taken 8/3/2000</td><td>Human isolation communications research, habitat equipment technology testing for human mission to Mars</td></tr>
+</tbody>
+</table>
+<p><a href="#sites-index">&uarr; Back to Index</a></p>
+</article>
+
+<article id="riotinto" class="site">
+<h3>4. Rio Tinto - Full New Data</h3>
+<p><strong>Location:</strong> Huelva Andalusia southwestern Spain 37.7N -6.6W approximate basin location not single sampling station, Site type acidic river system Iberian Pyrite Belt acid mine drainage and natural sulfide weathering environment</p>
+<p><strong>Analogue Relevance:</strong> Terrestrial geochemical and geomicrobiological analogue for selected iron and sulfate-rich environments on early Mars not exact replica</p>
+<p><strong>Overview:</strong> Acidic iron-rich river associated Iberian Pyrite Belt oxidation sulfide minerals especially pyrite generates acidity mobilizes iron and other metals acidophilic microorganisms participate iron sulfur cycling area used in astrobiology research and robotic subsurface-drilling demonstrations</p>
+<table border="1" cellpadding="8" cellspacing="0">
+<thead><tr><th>Property</th><th>Full New Values From Your JSON - All Parameters</th><th>Mars Analogue</th></tr></thead>
+<tbody>
+<tr><td>1. Iron- and sulfur-rich composition</td><td>Dissolved iron reported in 2026 study 20 g/L Upper concentration cited article introduction not universal, Dissolved Fe(III) in two sampled acidic headwater creeks 225.2 ±0.8 mmol/L up to equivalent approx 12.6 ±0.1 g/L specific samples site_specific_measurement S1, Sulfate Tintillo stream source sample 24700 mg/L historical June 2003 acid-drainage source not current basin average historical_site_specific S6, Iron Tintillo stream source sample 1824 mg/L historical June 2003 local source-water chemistry only historical_site_specific S6, Minerals: Pyrite FeS2 primary sulfide oxidation generates acidity releases iron sulfate, Jarosite KFe3(SO4)2(OH)6 ferric sulfate acidic sulfate-rich, Schwertmannite Fe8O8(OH)6(SO4).nH2O poorly crystalline ferric oxyhydroxysulfate acidic mine drainage, Ferrihydrite variable poorly crystalline Fe(III) oxyhydroxide microbial mats, Goethite FeO(OH) iron oxyhydroxide weathering precipitation, Hematite Fe2O3 iron oxide relevant comparison hematite-rich Martian terrains, Microbes: Acidithiobacillus acidophilic iron/sulfur metabolism common prokaryotes, Leptospirillum acidophilic iron-oxidizing, Acidiphilium acidophilic iron/sulfur, Gallionella microaerophilic Fe(II)-oxidizing abundant active in Fe(III)-rich mats, Rhodoblastus dominant genus nitrate/acetate/Fe(II) enrichment culture not evidence dominates natural river community, Scientific significance coupled iron sulfur microbial cycles explain highly acidic metal-rich waters iron-sulfate deposits develop persist, Cautions concentrations highly site time dependent 2003 Tintillo historical point measurements not current river-wide averages culture-based not represent natural abundance</td><td>Jarosite iron oxides sulfate-rich deposits comparison targets orbital rover observations ancient Mars mineral similarity alone does not prove identical formation conditions or past life S1 S12 S13 S2 S5 S6 S8</td></tr>
+<tr><td>2. High acidity</td><td>pH sampled acidic headwater creeks 1.6-1.8 measured two specific creeks 2026 study not basin-wide constant site_specific S1, Typical river-water pH cited 2026 study 2.2 approximate contextual value individual sites more or less acidic approximate_literature S1, pH range reported across sampled stations earlier survey 0.9-2.5 published spatial survey do not treat as real-time range every location historical_field_range S7, Processes oxidation pyrite other sulfide minerals generation sulfuric acidity release dissolved metals microbially mediated oxidation ferrous iron, Scientific significance natural laboratory studying acid generation metal mobility mineral precipitation microbial survival low-pH, Cautions pH varies sampling point hydrological conditions do not present single pH as representative entire basin Rio Tinto is Earth environment active water oxygen biology Martian comparisons limited analogies S1 S2 S7 S8</td><td>Useful interpreting acidic aqueous alteration iron-sulfate mineral assemblages may help explain selected ancient Martian deposits</td></tr>
+<tr><td>3. Microbial processes linked to mineral oxidation</td><td>Mechanisms microbial oxidation Fe(II) to Fe(III), sulfur oxidation acid generation, biofilm formation mineral surfaces, coupled biological abiotic sulfide-mineral weathering, Representative microbes Acidithiobacillus, Leptospirillum, Acidiphilium, Hydrogenotrophic cyanobacterium major component low-complexity community deepest characterized borehole do not generalize all waters, Parameters dissolved Fe(III) selected acidic headwater samples 225.2 ±0.8 mmol/L up to specific samples not basin-wide site_specific S1, Microbial diversity three major water-column genera 80% literature estimate Acidithiobacillus Leptospirillum Acidiphilium not fixed value all samples seasons published_review S2, Scientific significance site helps researchers separate biological abiotic contributions mineral oxidation acidity generation iron precipitation, Cautions microbial activity differs water sediment biofilm deep subsurface samples culture-based may not represent natural abundance presence terrestrial extremophiles analogue research not evidence Martian life S1 S2 S10 S11</td><td>Testable hypotheses whether chemolithotrophic microorganisms could exploit iron sulfur-based chemical energy protected subsurface habitats does not demonstrate life exists on Mars</td></tr>
+<tr><td>4. Astrobiology research</td><td>Research topics iron sulfate-mineral formation acidic conditions, microbial biosignatures preservation mineral deposits, subsurface habitability chemolithotrophic ecosystems, testing instruments protocols robotic life detection, Analogue comparisons Earth feature acidic sulfate-rich water Mars relevance comparison evidence ancient acidic aqueous alteration Mars, Earth feature jarosite iron oxides Mars relevance mineralogical comparison deposits observed Meridiani Planum other Martian terrains, Earth feature microbial mats subsurface communities Mars relevance testing hypotheses biosignature preservation protected subsurface habitats, Scientific significance basin allows researchers test how geological context affects habitability whether biosignatures can survive alteration burial exposure, Cautions Rio Tinto is Earth analogue not exact replica mineralogical similarity does not prove identical environmental histories no discovery life on Mars follows existence life at Rio Tinto S2 S3 S8 S12 S13</td><td>Jarosite iron oxides sulfate-rich deposits comparison orbital rover ancient Mars</td></tr>
+<tr><td>5. Testing Mars-analogue drilling technologies</td><td>Experiments MARTE Mars Astrobiology Research and Technology Experiment 2005 field campaign peer-reviewed results 2008 site Pena de Hierro near headwaters Rio Tinto drill type fluidless autonomous 10-axis coring drill simulated lander reported depth 6 m approx 30 days operation related subsurface geology paper reports 606 cm reported cores 21 life detection ATP bioluminescence assay SOLID2 antibody-array instrument reported detection biosignatures detected 12 of 15 samples analyzed SOLID2 assay result not proof extant Martian life source S3 S4, LMAP Life-detection Mars Analog Project field testing reported NASA 2015 site Rio Tinto Spain drill type computerized rotary-percussive drill approximately 35 inches long sample handling robotic arm transferred drilled material SOLID Signs of Life Detector lander mock-up purpose demonstrate dirt-to-data workflow field conditions extreme subsurface environment source S5, Automated aseptic drilling sample-delivery demonstration research published 2020 site Rio Tinto riverbanks drill type 1 m-class planetary prototype drill full-scale lander-platform mock-up capabilities automated drilling aseptic sample acquisition sample transfer sterile containers field life-detector-chip analysis laboratory analyses X-ray diffraction GC/MS isotope-ratio MS 16S/18S rRNA gene sequencing source S9, Engineering lessons dry drilling can retrieve scientifically useful subsurface cores without adding drilling fluid could contaminate samples, poorly consolidated gossan caused operational challenges related MARTE geology study reported about 35% core recovery and borehole-wall failure, remote science teams can use imaging spectral data select subsamples guide subsequent operations, aseptic sampling controlled sample transfer essential avoid confusing terrestrial contamination indigenous biosignatures, Scientific significance site enables integrated testing drilling hardware sample handling mineralogical instruments biosignature detection remote science operations Mars-relevant geological setting, Cautions these were terrestrial analog demonstrations not tests conducted on Mars reported depths core-recovery figures belong specific experiments drill sites not general property whole Rio Tinto region positive biosignature assay Earth sample does not itself establish same detection method would identify life on Mars S3 S4 S5 S9</td><td>Integrated testing drilling hardware sample handling mineralogical instruments biosignature detection remote science operations Mars-relevant geological setting</td></tr>
+</tbody>
+</table>
+<p><a href="#sites-index">&uarr; Back to Index</a></p>
+</article>
+
+<article id="danakil" class="site">
+<h3>5. Danakil Depression vs Columbia Hills - Full New Data</h3>
+<p><strong>Locations:</strong> Earth Danakil Depression Ethiopia approx coordinates Dallol lat 14.24 lon 40.30, Mars Columbia Hills Gusev Crater rover Spirit MER-A landing 2004-01-04 key feature Home Plate</p>
+<table border="1" cellpadding="8" cellspacing="0">
+<thead><tr><th>Property From Your File</th><th>Your Data Values</th><th>Mars Findings Spirit</th><th>NASA Sources</th></tr></thead>
+<tbody>
+<tr><td>1. Hydrothermal activity</td><td>Danakil: lava burns blue, bright yellow hot springs, lakes bubbling mud, Curiosities of Danakil Depression Image of Day Aug 27 2014 Landsat 8 June 27 2014 Gada Ale 287m stratovolcano crater lake boiling mud sulfurous gases basalt lava dark hue youngest flows darkest</td><td>Nearly pure silica soil found near Home Plate formed by volcanic steam or hot water percolating ground silica percent greater than 90 highest silica concentration recorded Mars instruments APXS Mini-TES</td><td>PDS Geosciences Node Analyst's Notebook MER an.rsl.wustl.edu/mer/ NASA Earth Observatory image Jesse Allen Robert Simmon Landsat USGS Caption Laura Rocchio</td></tr>
+<tr><td>2. Hypersaline environment</td><td>Danakil lies between Danakil Alps east Ethiopian Plateau west once joined rifting tore apart</td><td>Barnhill class rocks Home Plate show higher Cl Br Zn Ge than nearby Irvine basalts consistent interaction briny groundwater elements Cl Br Zn Ge SO3 instruments APXS</td><td>PDS Geosciences Node MER APXS data pds-geosciences.wustl.edu Paper Schmidt et al. 2008 Hydrothermal origin halogens Home Plate Gusev Crater JGR Planets 113(E6) doi:10.1029/2007JE003027</td></tr>
+<tr><td>3. Extreme conditions for life</td><td>Danakil scorching heat active volcanoes belch smoke sulfurous fumes hot springs strangely colored waters mineral content, Awash River waters evaporate never reach sea, Djibouti small Lake Assal whitish salt plain northwest lake Blue Lake Assal reportedly saltiest body water world lowest point Africa 510 feet 155m below sea level</td><td>Combined effect heat salinity acidity No single numeric dataset exists interpretation other measurements</td><td>Earth from Space STS032-101-027 Denakil Desert Denakil Depression Ethiopia Jan 1990 southwest-looking high-oblique photograph throat Y formed northern Ethiopia sides Great African Rift Valley move farther apart east-west Ahmar Mountains southern boundary north-south escarpment elevation change approx 5000 feet 1525m, NASA POWER API daily temperature at 2m power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M&community=RE&longitude=40.30&latitude=14.24&start=20240101&end=20240131</td></tr>
+<tr><td>4. Chemical deposition</td><td>Chemical deposition sulfur</td><td>Fe-bearing carbonate minerals Comanche outcrop similar to those martian meteorite ALH 84001 supporting formation hydrothermal conditions instruments Mossbauer APXS</td><td>PDS Geosciences Node MER Mossbauer data pds-geosciences.wustl.edu Paper Morris et al. 2010 Identification carbonate-rich outcrops Mars Spirit rover Science 329 421-424</td></tr>
+<tr><td>5. Spectral fingerprint similarity</td><td>NASA Earthdata ASTER/Landsat USGS Spectral Library</td><td>Mini-TES showed clear silica spectrum trench dug Spirit jammed wheel instruments Mini-TES</td><td>PDS Geosciences Node MER Mini-TES PDS Geosciences Node MRO CRISM orbital NASA Earthdata ASTER Landsat USGS Spectral Library API endpoints mars_rover_photos_spirit https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1000 images only not chemical measurements verify availability api.nasa.gov nasa_power https://power.larc.nasa.gov/api/temporal/daily/point meteorological data Earth locations Caveats chemical spectral data Spirit PDS archive not api.nasa.gov Danakil coordinates approximate Property 3 no ready numeric dataset</td></tr>
+</tbody>
+</table>
+<p><a href="#sites-index">&uarr; Back to Index</a></p>
+</article>
+
+<article id="iceland" class="site">
+<h3>6. Askja & Vatnajokull vs Acidalia & Arcadia Planitia - Full New Data</h3>
+<p><strong>Locations:</strong> Earth Askja volcano Vatnajokull ice cap Iceland approx Askja lat 65.03 lon -16.75 Vatnajokull lat 64.40 lon -16.80, Mars Acidalia Planitia Arcadia Planitia Northern lowlands Acidalia center lat 47 lon east 338</p>
+<table border="1" cellpadding="8" cellspacing="0">
+<thead><tr><th>Property From Your File</th><th>Your Data Values - Mars Findings</th><th>Sources</th></tr></thead>
+<tbody>
+<tr><td>1. Subglacial volcanism - التفاعل بين الجليد والبركان</td><td>Mars summary Acidalia and Chryse contain tuya-like mesas ice-emplaced flows bright mounds other possible volcanic vents suggesting volcano-ice interaction Icelandic tuyas Herdubreid Hlodufell used as analogs, Example tuya Acidalia plateau size 7 x 5 km height 470 m note identified Viking frame 26A28 Allen 1979</td><td>Icarus 212 2011 597-621 Evidence of volcanic and glacial activity in Chryse and Acidalia Planitiae Mars</td></tr>
+<tr><td>2. Fine volcanic ash tephra glass sand - الرماد البركاني الناعم</td><td>Acidalia Planitia and north polar sand sea primarily composed volcanic glass interpreted evidence explosive volcanism Iceland has large glass-sand deserts, Caveat interpretation from orbital spectra not direct sampling</td><td>NASA/JPL orbital spectral data reported Horgan et al.</td></tr>
+<tr><td>3. Catastrophic outburst floods Jokulhlaups - الفيضانات الكارثية</td><td>Researchers suggest volcanism beneath ice could form large subglacial lakes which could help explain Mars catastrophic flood features, Caveat hypothesis not settled how subglacial water relates outflow channels</td><td>Live Science report Mars volcanic glass Horgan Cousins</td></tr>
+<tr><td>4. Glacial landforms - أشكال التضاريس الجليدية</td><td>Arcadia Planitia shows sinuous features resemble Antarctic ice streams plus viscous flow features suggest buried water-ice glaciers, Mid-latitude ice subsurface indicated Mars Odyssey 2002 and surface-level ice confirmed Phoenix 2008, Note eskers and drumlins mentioned list not verified sources retrieved</td><td>Hibbard et al. 2021 Evidence for widespread glaciation in Arcadia Planitia Mars Icarus doi:10.1016/j.icarus.2020.114298, NASA data sources Mars PDS Geosciences Node PDS Imaging Node HiRISE CTX THEMIS images Mars Odyssey data subsurface ice api.nasa.gov Mars images available only for rovers these regions no rover so API will not return them</td></tr>
+<tr><td>5. Sharp climate fluctuations - التقلبات المناخية الحادة</td><td>Different orbital tilt past may have allowed subglacial melt Mars hypothesis not measured value, Earth data API NASA POWER API temperature T2M and relative humidity RH2M Askja URL https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,RH2M&community=RE&longitude=-16.75&latitude=65.03&start=20240101&end=20241231 format JSON Vatnajokull URL longitude -16.80 latitude 64.40 same, Earth NASA POWER API climate NASA Earthdata NSIDC DAAC glaciers ice cover Landsat MODIS imagery</td><td>Caveats No rover visited Acidalia Arcadia Planitia all Mars data from orbit Most properties scientific interpretations not numeric datasets Coordinates Iceland approximate</td></tr>
+</tbody>
+</table>
+<p><a href="#sites-index">&uarr; Back to Index</a></p>
+</article>
+
+</section>
+
+<hr>
+
+<p><small>&copy; 2026 HexaLogic - All numbers from 6 JSON files - Display measurement site and elevation beside each reading, Distinguish measured values published ranges averages estimates experimental results, Show observation date separately publication year dataset update date, Do not present historical UV peaks current readings, Do not generalize individual soil samples entire Atacama Desert, Render null as unavailable never zero - NASA PDS, Earth Observatory, ASTER, JPL, NASA POWER, NTRS, USGS, NSIDC - All images NASA public domain</small></p>
+
+</body>
+</html>

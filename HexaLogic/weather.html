@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weather & Comparison - Mars Analog Sites - HexaLogic</title>
+<link rel="stylesheet" href="style.css">
+<script src="background.js" defer></script>
+<script src="app.js" defer></script>
+<script src="localization.js" defer></script>
+</head>
+<body>
+
+<header id="top">
+<h1>Mars Analog Sites Interface</h1>
+<p><strong>Team:</strong> HexaLogic</p>
+<nav id="main-nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="sites.html">Analog Sites</a></li>
+<li><a href="test-sites.html">Site Analogy Test</a></li>
+<li><strong>Weather & Comparison</strong></li>
+<li><a href="team.html">Team</a></li>
+</ul>
+</nav>
+</header>
+
+<hr>
+
+<section id="telemetry">
+<h2>Current Weather Compared to Mars - 6 Sites Full New Data</h2>
+<p>Live Earth weather is loaded from this site's backend, which fetches current values from Open-Meteo. Mars values are fixed references for comparison only. The site summaries use published data and references from the six source files.</p>
+<p id="weather-status" class="loading" role="status" aria-live="polite">Waiting for weather data…</p>
+
+<table id="weather-table" border="1" cellpadding="8" cellspacing="0">
+<thead>
+<tr><th>Site</th><th>Current Temp</th><th>Humidity</th><th>Pressure</th><th>Reference Earth Values From Your New Data</th><th>Mars Counterpart (Approx Values)</th></tr>
+</thead>
+<tbody>
+<tr id="weather-mcmurdo" data-lat="-77.85" data-lon="166.66">
+<td><strong>McMurdo Dry Valleys</strong></td>
+<td id="mcmurdo-temp">--</td>
+<td id="mcmurdo-humidity">--</td>
+<td id="mcmurdo-pressure">--</td>
+<td>Annual mean -20C approx 1986-2017, Extremes -65.7C to 12C station dependent, Annual precip less than 100 mm, Lake-ice sublimation 0.1-0.2 mm/year, Solar 102 W/m2, UV Index 0.35, Ozone 216.37 Dobson, Perchlorate Lake Vida 49 ug/L, Chlorate 11 ug/L, Mars-sim 58 sols, UVC 278 martian years<br><small>NASA POWER: power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,RH2M&community=RE&longitude=166.66&latitude=-77.85</small></td>
+<td>-60C | 600 Pa | UV Extreme | Perchlorate 0.5% - Phoenix | Sublimation main ice loss</td>
+</tr>
+
+<tr id="weather-atacama" data-lat="-24.0578" data-lon="-69.8258">
+<td><strong>Atacama Desert - Yungay</strong></td>
+<td id="atacama-temp">--</td>
+<td id="atacama-humidity">--</td>
+<td id="atacama-pressure">--</td>
+<td>Yungay less than 2 mm/year precip 2023 site ref, Mean 14-16C, Extremes -5.7 to 37.9C, RH 1-95%, PET 1-2 mm/day, Soil perchlorate 290-2565 ug/kg, Surface water 744-1480 ug/L, Multi-site mean 206 mg/kg, Salt polygonal surface 31 wt%, subsurface 50 wt%, Chloride deliquescent 50 g/kg, UV peak Chajnantor 20, Paranal 16, noon 11, ARADS 4 years, K-REX2 drill 2m<br><small>Elev 948m, Open-Meteo lat -24.0578 lon -69.8258, NASA POWER T2M,RH2M</small></td>
+<td>-40C | 700 Pa | UV Very High | Perchlorate 0.5% Curiosity SAM | Driest hyper-arid</td>
+</tr>
+
+<tr id="weather-haughton" data-lat="75.3667" data-lon="-89.6833">
+<td><strong>Haughton Crater</strong></td>
+<td id="haughton-temp">--</td>
+<td id="haughton-humidity">--</td>
+<td id="haughton-pressure">--</td>
+<td>Apparent diameter 23 km approx mapping 20-24 km rim definition, Original final 16 km reconstruction 2024, Age 31.04 ±0.37 Ma weighted mean 40Ar/39Ar 2021 U-Pb support old reports 23-24 Ma, Thickness crater-fill 125m, Volume 7 km3, Area central unit 60 km2, polar_desert, Ground ice 60 cm depth, 100 samples approx, Meltwater channels, glacial trough valleys, small lakes, FMARS crew 7, mission 4 months, 20+ projects, Devon largest uninhabited island less than 1000 miles North Pole, HMP since 1997<br><small>PIA03714 MISR Terra June 28 2001</small></td>
+<td>-55C | 650 Pa | UV High | Gale Crater 154km morphology analog | Breccia melt</td>
+</tr>
+
+<tr id="weather-riotinto" data-lat="37.7" data-lon="-6.6">
+<td><strong>Rio Tinto - Spain</strong></td>
+<td id="riotinto-temp">--</td>
+<td id="riotinto-humidity">--</td>
+<td id="riotinto-pressure">--</td>
+<td>Dissolved Fe 20 g/L upper cited 2026 intro not universal, Fe(III) 225.2 ±0.8 mmol/L =12.6 g/L headwater creeks site specific, Sulfate Tintillo source 24700 mg/L June 2003 historical site specific not basin average, Iron Tintillo 1824 mg/L historical, Minerals Pyrite FeS2, Jarosite KFe3(SO4)2(OH)6, Schwertmannite, Ferrihydrite, Goethite FeO(OH), Hematite Fe2O3, Copiapite, Gypsum CaSO4.2H2O, Microbes Acidithiobacillus, Leptospirillum, Acidiphilium, Gallionella abundant active Fe(III) mats, Rhodoblastus enrichment culture dominant not natural dominance, pH headwater 1.6-1.8 site specific, Typical 2.2 approx, Range 0.9-2.5 historical survey, 80% three genera, MARTE 2005 6m depth 606cm 30 days 21 cores fluidless 10-axis ATP + SOLID2 12/15 biosignatures, LMAP 2015 35 inches rotary-percussive SOLID dirt-to-data, 2020 1m prototype aseptic XRD GC/MS isotope 16S/18S rRNA, Lessons dry drilling useful, gossan 35% core recovery failure, remote science imaging spectral selection, aseptic sampling essential<br><small>Iberian Pyrite Belt, approximate basin not single station</small></td>
+<td>Meridiani Planum - Opportunity | pH 2-4 ancient acidic water | Jarosite hematite blueberries | Fe-sulfate mineral assemblages</td>
+</tr>
+
+<tr id="weather-danakil" data-lat="14.24" data-lon="40.30">
+<td><strong>Danakil Depression - Ethiopia</strong></td>
+<td id="danakil-temp">--</td>
+<td id="danakil-humidity">--</td>
+<td id="danakil-pressure">--</td>
+<td>Dallol 14.24N 40.30E approx, -155m below sea level saltiest water 510 feet lowest Africa, Blue lava yellow springs bubbling mud lakes, Gada Ale 287m stratovolcano crater lake boiling mud sulfurous fumes basalt dark youngest flows darkest, Awash River evaporates never reaches sea, Lake Assal whitish salt plain Blue Lake Assal saltiest body world, Hypersaline scorching heat active volcanoes smoke, Combined heat salinity acidity no single numeric dataset interpretation other measurements, NASA POWER daily T2M at 14.24 40.30<br><small>NASA POWER: power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M&community=RE&longitude=40.30&latitude=14.24&start=20240101&end=20240131, Landsat 8 June 27 2014</small></td>
+<td>Columbia Hills Gusev Home Plate Spirit 2004-01-04 | Silica greater than 90% highest on Mars steam/hot water APXS Mini-TES | Barnhill higher Cl Br Zn Ge SO3 briny groundwater Schmidt 2008 JGR | Fe-carbonate Comanche similar ALH84001 Morris 2010 Science 329 | Mini-TES silica spectrum trench jammed wheel MRO CRISM</td>
+</tr>
+
+<tr id="weather-iceland" data-lat="65.03" data-lon="-16.75">
+<td><strong>Askja & Vatnajokull - Iceland</strong></td>
+<td id="iceland-temp">--</td>
+<td id="iceland-humidity">--</td>
+<td id="iceland-pressure">--</td>
+<td>Askja 65.03N -16.75W, Vatnajokull 64.40N -16.80W approx coordinates not single station, Tuya Acidalia example 7x5 km plateau height 470m Viking frame 26A28 Allen 1979, Herdubreid Hlodufell Iceland tuyas analogs, Acidalia north polar sand sea volcanic glass explosive volcanism Iceland glass-sand deserts caveat orbital spectra not sampling, Jokulhlaups volcanism beneath ice could form subglacial lakes explain Mars catastrophic floods hypothesis not settled, Arcadia sinuous features Antarctic ice streams viscous flow buried ice glaciers, Mid-latitude ice Odyssey 2002 Phoenix 2008 confirmed, Eskers drumlins not verified sources, Different orbital tilt past may allow subglacial melt hypothesis not measured, NASA POWER T2M RH2M Askja URL power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,RH2M&longitude=-16.75&latitude=65.03&start=20240101&end=20241231 Vatnajokull lon -16.80 lat 64.40, No rover visited Acidalia Arcadia all Mars data orbit HiRISE CTX THEMIS<br><small>Sources Icarus 212 2011 Chryse Acidalia, Hibbard 2021 Arcadia Icarus</small></td>
+<td>Acidalia 47N 338E & Arcadia Planitia Northern lowlands | Tuya-like mesas ice-emplaced flows bright mounds vents volcano-ice interaction | Volcanic glass sand sea | Subglacial lakes catastrophic floods outflow channels | Sinuous Antarctic ice streams viscous flow buried glaciers | Odyssey 2002 subsurface ice</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<hr>
+
+<section id="api-notes">
+<h3>NASA Data Sources Used - From Your 6 JSON Files</h3>
+<table border="1" cellpadding="8" cellspacing="0">
+<thead><tr><th>Site</th><th>Earth API</th><th>Mars API / Archive</th></tr></thead>
+<tbody>
+<tr><td>McMurdo</td><td>NASA POWER T2M,RH2M, mcm.lternet.edu meteorology, NSIDC, Landsat MODIS Earthdata, NOAA antuv</td><td>PDS Geosciences, usap-dc.org, astrobiology.nasa.gov, ASTER 58.5x64.9km 77.5S 162E Dec 8 2002 NASA/METI/AIST</td></tr>
+<tr><td>Atacama</td><td>Open-Meteo forecast, NASA POWER, Direccion Meteorologica Chile catalog 94, NASA Earthdata ASTER, USGS spectral library</td><td>api.nasa.gov Mars, PDS SAM data perchlorate, ARADS nasa.gov/universe/atacama-rover-astrobiology-drilling-studies-arads NTRS 20240000586</td></tr>
+<tr><td>Haughton</td><td>Open-Meteo, HMP field reports, NASA Image Library ARC-2007-ACD07-0170-005</td><td>PIA03714 MISR Terra June 28 2001 photojournal.jpl.nasa.gov/jpeg/PIA03714.jpg, PDS Imaging, Mars Institute marsinstitute.no/hmp</td></tr>
+<tr><td>Rio Tinto</td><td>Open-Meteo, Field lab XRD GC/MS isotope 16S/18S rRNA</td><td>NASA Earth Observatory Oct 30 2020 Landsat 8 OLI Feb 2 2020 Joshua Stevens USGS eoimages 87875, NTRS 20080026258, MARTE LMAP S3 S4 S5 S9 Astrobiology 2020 PMC7499885, PDS Geosciences</td></tr>
+<tr><td>Danakil</td><td>Open-Meteo, NASA POWER T2M daily point lon 40.30 lat 14.24, STS032-101-027 Denakil Desert Jan 1990 southwest oblique Ahmar Mountains 5000 feet elevation change</td><td>PDS Analyst Notebook an.rsl.wustl.edu/mer/, PDS MER APXS Mini-TES Mossbauer, PDS MRO CRISM orbital, Schmidt 2008 JGR 113 E6, Morris 2010 Science 329, api.nasa.gov spirit photos sol 1000 images only not chemistry, NASA Earth Observatory Aug 27 2014 Landsat 8 June 27 2014 Jesse Allen Robert Simmon USGS eoimages 84319</td></tr>
+<tr><td>Iceland</td><td>Open-Meteo, NASA POWER T2M,RH2M Askja Vatnajokull URLs, NASA Earthdata NSIDC DAAC Landsat MODIS</td><td>PDS Geosciences Imaging Nodes HiRISE CTX THEMIS, Mars Odyssey subsurface ice 2002, Phoenix surface ice 2008 confirmed, Icarus 212 2011, Hibbard 2021 Icarus Arcadia glaciation, api.nasa.gov not available for these regions no rover orbital only</td></tr>
+</tbody>
+</table>
+</section>
+
+<hr>
+
+<p><small>&copy; 2026 HexaLogic - All numbers from 6 JSON files - Display measurement site and elevation beside each reading, Distinguish measured values published ranges averages estimates experimental results, Show observation date separately publication year dataset update date, Do not present historical UV peaks current readings, Do not generalize individual soil samples entire region, Render null as unavailable never zero - NASA PDS, Earth Observatory, ASTER, JPL, NASA POWER, NTRS, USGS, NSIDC - All images NASA public domain</small></p>
+
+</body>
+</html>

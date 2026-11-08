@@ -1,0 +1,15 @@
+{
+  "name": "hexalogic-mars-analogs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "HexaLogic Mars analog sites website and SQLite API",
+  "scripts": {
+    "start": "node backend/server.js",
+    "start:local": "node backend/server.js --local",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}

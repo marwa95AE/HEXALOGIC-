@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site Analogy Test - Mars Analog Sites - HexaLogic</title>
+<link rel="stylesheet" href="style.css">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""
+>
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+  defer
+></script>
+<script src="background.js" defer></script>
+<script src="app.js" defer></script>
+<script src="localization.js" defer></script>
+</head>
+<body>
+
+<header id="top">
+  <h1>Mars Analog Sites Interface</h1>
+  <p><strong>Team:</strong> HexaLogic</p>
+  <nav id="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sites.html">Analog Sites</a></li>
+      <li><a href="test-sites.html">Site Analogy Test</a></li>
+      <li><a href="weather.html">Weather &amp; Comparison</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+  </nav>
+</header>
+
+<hr>
+
+<main>
+  <section id="site-test">
+    <h2>Analog Site Test &amp; Similarity Score</h2>
+    <p>Choose Mars or the Moon to rank the six Earth analog sites. The top three are selected automatically from a transparent manual score; no machine-learning model is used.</p>
+
+    <form id="site-test-form">
+      <label for="analogy-target">Choose a comparison target</label>
+      <select id="analogy-target" name="target">
+        <option value="mars">Mars</option>
+        <option value="moon">Moon</option>
+      </select>
+      <button type="submit">Run Site Test</button>
+    </form>
+
+    <p id="site-test-status" class="api-status" role="status" aria-live="polite">Loading site test…</p>
+
+    <section class="scoring-method" aria-labelledby="scoring-heading">
+      <h3 id="scoring-heading">How the score is calculated</h3>
+      <p>Each site receives a manually assigned score from 1 (low match) to 5 (strong match) for each criterion. The weighted result is out of 100:</p>
+      <p class="score-formula"><code>Similarity = Σ (criterion score × criterion weight) ÷ 5</code></p>
+      <p id="scoring-weights"></p>
+      <p class="scoring-caveat">This beginner-friendly comparison is an educational estimate, not a scientific measurement. Earth sites do not reproduce the Moon's vacuum or low gravity, or the full conditions on Mars.</p>
+    </section>
+
+    <section id="selected-sites" aria-labelledby="selected-heading">
+      <h3 id="selected-heading">Top 3 selected sites</h3>
+      <div id="selected-site-list" class="selected-site-list"></div>
+    </section>
+
+    <section id="site-test-map-section" aria-labelledby="map-heading">
+      <h3 id="map-heading">Map of the three selected Earth sites</h3>
+      <div class="site-map-toolbar">
+        <button id="site-map-fit" class="site-map-control" type="button">Show all selected sites</button>
+        <button id="site-map-fullscreen" class="site-map-control" type="button">View map fullscreen</button>
+      </div>
+      <div id="site-test-map" role="region" aria-label="Interactive map showing the three selected Earth analog sites"></div>
+      <div id="site-map-legend" class="site-map-legend" aria-label="Selected sites on the map"></div>
+      <p id="map-status" class="map-status"></p>
+      <p class="map-attribution">Satellite imagery © Esri, Maxar, Earthstar Geographics, and the GIS User Community. Street map © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</p>
+    </section>
+
+    <section aria-labelledby="rankings-heading">
+      <h3 id="rankings-heading">Full ranking and manual score breakdown</h3>
+      <div class="table-scroll">
+        <table id="site-rankings-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Earth analog site</th>
+              <th>Region</th>
+              <th>Similarity score</th>
+              <th>Reason for the comparison</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="breakdown-hint">Open “Score details” on a selected site to see its ratings for each weighted criterion.</p>
+    </section>
+  </section>
+</main>
+
+<hr>
+
+<p><small>&copy; 2026 HexaLogic - Mars Analog Sites Interface project proposal</small></p>
+
+</body>
+</html>
